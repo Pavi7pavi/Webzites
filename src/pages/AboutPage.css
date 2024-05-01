@@ -1,0 +1,151 @@
+/* Additional styles for image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  margin: 0 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Additional styles for typography effects on About Us page */
+
+/* Typography */
+.about-page-container {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Default text color */
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.unique-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInLeft 1s ease-out;
+  transition: color 0.3s;
+}
+
+.unique-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #ff7e5f; /* Fallback color */
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.unique-title:hover::before {
+  transform: scaleX(1);
+}
+
+.unique-title:hover {
+  color: transparent;
+}
+
+.unique-item {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #92fe9d, #00c9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInLeft 1s ease-out;
+  transition: color 0.3s;
+}
+
+.unique-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #92fe9d; /* Fallback color */
+  background: linear-gradient(to right, #92fe9d, #00c9ff);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.unique-item:hover::before {
+  transform: scaleX(1);
+}
+
+.unique-item:hover {
+  color: transparent;
+}
+
+.additional-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.additional-content p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

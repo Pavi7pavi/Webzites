@@ -1,0 +1,67 @@
+.hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  height: 700px;
+  position: relative; /* Ensure the background video covers the full viewport */
+}
+
+.sticky-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the background video stays behind content */
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-white {
+  color: white;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  border: none;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.service-card video { 
+  transition: all 0.3s ease;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card:hover video {
+  transform: scale(1.1);
+}
+
+.services-section {
+  padding: 60px 15px;
+  background: #f9f9f9;
+}
+
+.contact-section {
+  background: #0056b3;
+  color: white;
+  padding: 40px 15px;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}

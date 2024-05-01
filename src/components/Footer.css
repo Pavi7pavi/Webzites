@@ -1,0 +1,120 @@
+/* Default styles */
+.footer {
+  background-color: #000000; /* Dark purple */
+  color: #fff;
+  padding: 50px 20px; /* Padding for other devices */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto; /* Center the footer horizontally */
+  max-width: 1200px; /* Adjust max-width as needed */
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  color: #8a4bff; /* Light purple */
+  font-size: 1.5rem;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-column ul li:hover {
+  transform: translateY(-5px);
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.footer-column ul li a:hover {
+  color: #ffd700; /* Gold */
+}
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram,
+.icon-linkedin {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8a4bff; /* Light purple */
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.icon-facebook:hover,
+.icon-twitter:hover,
+.icon-instagram:hover,
+.icon-linkedin:hover {
+  background-color: #ffd700; /* Gold */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .footer {
+    padding: 50px 30px; /* Adjust padding for mobile */
+  }
+
+  .footer-container {
+    padding: 0 15px; /* Add padding for equal space on left and right sides */
+  }
+}
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .footer {
+    padding: 50px; /* Equal padding on left and right sides */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Change to one column layout for mobile */
+    align-items: center; /* Center content horizontally */
+  }
+
+  .footer-column {
+    flex: auto; /* Take full width for one column layout */
+    margin-right: 0; /* Remove right margin for one column layout */
+    margin-bottom: 30px; /* Add bottom margin for spacing */
+  }
+}

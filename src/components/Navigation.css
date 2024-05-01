@@ -1,0 +1,33 @@
+/* CSS for the custom navigation styles */
+
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+  padding-top: 15px; /* Add some padding to the top */
+  padding-bottom: 15px; /* Add some padding to the bottom */
+}
+
+  
+  .logo {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); /* Enlarge the logo on hover */
+  }
+  
+  .nav-link-container {
+    margin-left: 15px; /* Add spacing between nav links */
+  }
+  
+  .nav-link {
+    color: #fff; /* White text color */
+    font-size: 18px; /* Font size for nav links */
+    font-weight: 500; /* Font weight for nav links */
+    text-transform: uppercase; /* Uppercase text */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change text color on hover */
+  }
+  
