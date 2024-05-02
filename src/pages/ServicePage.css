@@ -1,11 +1,16 @@
+/* Service Page Styles */
+.service-page {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
 .hero {
-  position: relative; /* Ensure the video is positioned relative to the container */
+  position: relative;
   color: #fff;
   padding: 100px 0;
   text-align: center;
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-  height: 500px;
- 
+  background: linear-gradient(to right, #667eea, #764ba2);
 }
 
 .hero-content {
@@ -15,7 +20,6 @@
   transform: translate(-50%, -50%);
   max-width: 800px;
   margin: 0 auto;
-
 }
 
 .hero-content h1 {
@@ -34,12 +38,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the video covers the entire container */
+  object-fit: cover;
 }
 
+/* Service Section */
 .service-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -52,8 +57,13 @@
   border-radius: 10px;
   text-align: center;
   margin: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
 }
 
 .service-icon img {
@@ -66,7 +76,7 @@
 .service-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #6c5ce7;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -75,18 +85,109 @@
 }
 
 .service-link:hover {
-  background-color: #0056b3;
+  background-color: #7d5fff;
 }
 
+/* Types of Websites Section */
+.types-of-websites {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.types-of-websites h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.website-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.website-item {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.website-item:hover {
+  transform: scale(1.05);
+}
+
+.website-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.website-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.website-item p {
+  font-size: 16px;
+}
+
+/* Animation for Images */
+.website-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Website Benefits Section */
+.website-benefits {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.website-benefits h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.website-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.website-benefits li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Portfolio Section */
 .portfolio-section {
   text-align: center;
   margin-top: 50px;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
 .project-item {
-  display: inline-block;
-  max-width: 300px;
-  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
 }
 
 .project-item img {
@@ -96,37 +197,59 @@
   margin-bottom: 20px;
 }
 
+.project-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 .project-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #6c5ce7;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: #0056b3;
+  background-color: #7d5fff;
 }
 
+/* Contact Us Section */
 .contact-us {
-  background-color: #f9f9f9;
+  background-color: #6c5ce7;
+  color: #fff;
   padding: 100px 0;
   text-align: center;
+}
+
+.contact-us h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .contact-button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
+  color: #6c5ce7;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #0056b3;
+  background-color: #7d5fff;
+  color: #fff;
 }

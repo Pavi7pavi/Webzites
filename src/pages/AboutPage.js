@@ -4,6 +4,12 @@ import './AboutPage.css'; // Import your CSS styles for further customization
 import backgroundVideo from '../videos/v15.mp4'; // Import the background video
 import image1 from '../images/img23.png'; // Import additional images
 import image2 from '../images/img24.jpg';
+import image3 from '../images/img10.jpg';
+import image4 from '../images/img12.jpg';
+import image5 from '../images/img13.jpg';
+import image6 from '../images/img14.jpg';
+import image7 from '../images/img15.jpg';
+import image8 from '../images/img16.jpg';
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,8 +21,8 @@ const AboutPage = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: 0.3,
+        duration: 1,
+        delay: 0.5,
       },
     });
     setIsVisible(true);
@@ -24,6 +30,7 @@ const AboutPage = () => {
 
   return (
     <div className="about-page-container">
+      <div className="stripe-left"></div>
       <div className="hero-section">
         {/* Video Background */}
         <video className="video-bg" autoPlay muted loop>
@@ -31,6 +38,7 @@ const AboutPage = () => {
           Your browser does not support the video tag.
         </video>
       </div>
+      <div className="stripe-right"></div>
 
       <div className="about-content">
         <motion.h1
@@ -146,20 +154,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
-            <motion.img
-              src={image1}
-              alt="Image 1"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image2}
-              alt="Image 2"
-              initial={{ opacity: 0, scale: 1.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
+            {/* Add more images with innovative animations as needed */}
           </div>
           <h2>Our Vision</h2>
           <p>
@@ -171,36 +166,23 @@ const AboutPage = () => {
           {/* Image container 1 with custom shape */}
           <div className="image-container image-container-1">
             <motion.img
-              src={image1}
-              alt="Image 1"
+              src={image7}
+              alt="Image 3"
               initial={{ opacity: 0, rotate: -45 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image2}
-              alt="Image 2"
+              src={image8}
+              alt="Image 4"
               initial={{ opacity: 0, rotate: 45 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
-            <motion.img
-              src={image1}
-              alt="Image 1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image2}
-              alt="Image 2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
+            {/* Add more images with innovative animations as needed */}
           </div>
           <h2>Core Values</h2>
-          <ul>
+          <ul className="core-values-list">
             <li>Excellence</li>
             <li>Integrity</li>
             <li>Innovation</li>
@@ -210,33 +192,34 @@ const AboutPage = () => {
           {/* Image container 3 with custom shape */}
           <div className="image-container image-container-3">
             <motion.img
-              src={image1}
-              alt="Image 1"
+              src={image3}
+              alt="Image 5"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image1}
-              alt="Image 1"
+              src={image4}
+              alt="Image 6"
               initial={{ opacity: 0, skewX: 30 }}
               animate={{ opacity: 1, skewX: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image2}
-              alt="Image 2"
+              src={image5}
+              alt="Image 7"
               initial={{ opacity: 0, skewY: -30 }}
               animate={{ opacity: 1, skewY: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image2}
-              alt="Image 2"
+              src={image6}
+              alt="Image 8"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
+            {/* Add more images with innovative animations as needed */}
           </div>
           <h2>Our Team</h2>
           <p>
@@ -246,36 +229,7 @@ const AboutPage = () => {
             seamlessly to deliver results that exceed expectations and drive
             success for our clients.
           </p>
-          <div className="image-container">
-            <motion.img
-              src={image1}
-              alt="Image 1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image2}
-              alt="Image 2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image1}
-              alt="Image 1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image2}
-              alt="Image 2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-          </div>
+
         </div>
         {/* Add more sections and image containers with unique shapes as needed */}
       </div>

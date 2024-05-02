@@ -1,3 +1,20 @@
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font to the entire page */
+}
+
+.hero-content h1 {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font to the hero section heading */
+  font-size: 3.5rem;
+  font-weight: 700; /* Use bold font weight */
+  margin-bottom: 30px;
+  color: #fff; /* White color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+}
+
 .hero-section {
   background-repeat: no-repeat;
   background-size: cover;
