@@ -1,84 +1,283 @@
+/* Add your custom CSS styles here */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+/* Global Styles */
 body {
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font to the entire page */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.hero-content h1 {
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font to the hero section heading */
-  font-size: 3.5rem;
-  font-weight: 700; /* Use bold font weight */
-  margin-bottom: 30px;
-  color: #fff; /* White color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+/* Hero Section */
+.hero-section-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-section {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-  height: 700px;
-  position: relative; /* Ensure the background video covers the full viewport */
+  position: relative;
+  min-height: 100vh; /* Updated height to min-height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
-.sticky-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensure the background video stays behind content */
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.video-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
-.hero-content {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.hero-content .btn-lg {
+  font-size: 1.25rem;
+  padding: 12px 30px;
 }
 
-.text-white {
-  color: white;
+.hero-content .scroll-down {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* Hover Effects */
+.btn-primary,
+.btn-outline-primary,
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.services-section {
+  padding: 80px 0;
 }
 
 .service-card {
-  transition: all 0.3s ease;
   border: none;
-  overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card video { 
-  transition: all 0.3s ease;
-  height: 200px;
+  width: 100%;
+  height: 200px; /* Set the height of the video container */
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover video {
   transform: scale(1.1);
 }
 
-.services-section {
-  padding: 60px 15px;
-  background: #f9f9f9;
+/* Additional Content Sections */
+.additional-content-section {
+  padding: 80px 0;
 }
 
-.contact-section {
-  background: #0056b3;
+.additional-content-section h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.additional-content-section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.additional-content-section h2:hover::after {
+  width: 80px;
+}
+
+.additional-content-section p {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: indicatorPulse 1.5s infinite alternate;
+}
+
+@keyframes indicatorPulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* Gradient Background */
+.bg-primary-gradient {
+  background: linear-gradient(to right, #007bff, #00bcd4);
+  color: #fff;
+}
+
+.bg-secondary-gradient {
+  background: linear-gradient(to right, #6c757d, #212529);
+  color: #fff;
+}
+
+/* Typography Animation */
+.typography-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.typography-effect::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.typography-effect:hover::after {
+  width: 80%;
+}
+
+/* Button Animation */
+.btn-primary,
+.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.additional-content-section .section-text {
   color: white;
-  padding: 40px 15px;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* Add some space between rows */
+.row {
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .btn-lg {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+
+  .service-card video {
+    height: 180px;
+  }
+
+  .additional-content-section h2 {
+    font-size: 3rem;
+  }
+
+  .additional-content-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    padding: 8px 20px;
+    font-size: 0.875rem;
+  }
+
+  .service-card video {
+    height: 160px;
+  }
+
+  .additional-content-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .additional-content-section p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 6px 16px;
+    font-size: 0.75rem;
+  }
+
+  .service-card video {
+    height: 140px;
+  }
+
+  .additional-content-section h2 {
+    font-size: 2rem;
+  }
+
+  .additional-content-section p {
+    font-size: 0.75rem;
+  }
 }

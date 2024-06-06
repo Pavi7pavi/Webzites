@@ -6,28 +6,30 @@
   padding-bottom: 15px; /* Add some padding to the bottom */
 }
 
-  
-  .logo {
-    transition: transform 0.3s ease;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1); /* Enlarge the logo on hover */
-  }
-  
-  .nav-link-container {
-    margin-left: 15px; /* Add spacing between nav links */
-  }
-  
-  .nav-link {
-    color: #fff; /* White text color */
-    font-size: 18px; /* Font size for nav links */
-    font-weight: 500; /* Font weight for nav links */
-    text-transform: uppercase; /* Uppercase text */
-    transition: color 0.3s ease; /* Smooth color transition */
-  }
-  
-  .nav-link:hover {
-    color: #ffc107; /* Change text color on hover */
-  }
-  
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Enlarge the logo on hover */
+}
+
+.nav-link-container {
+  margin-left: 20px; /* Add spacing between nav links */
+}
+
+.nav-link {
+  color: #fff; /* White text color */
+  font-size: 18px; /* Font size for nav links */
+  font-weight: 400; /* Font weight for nav links */
+  text-transform: uppercase; /* Uppercase text */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-right: 30px; /* Add space between nav links */
+  font-family: 'Roboto', sans-serif; /* Google Font 'Roboto' */
+  letter-spacing: 1px; /* Add some letter spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+}
+
+.nav-link:hover {
+  color: #ffc107; /* Change text color on hover */
+}

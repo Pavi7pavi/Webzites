@@ -65,9 +65,8 @@
 }
 
 .icon-facebook,
-.icon-twitter,
 .icon-instagram,
-.icon-linkedin {
+.icon-whatsapp {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -79,9 +78,9 @@
 }
 
 .icon-facebook:hover,
-.icon-twitter:hover,
-.icon-instagram:hover,
-.icon-linkedin:hover {
+.icon-whatsapp:hover,
+.icon-instagram:hover
+ {
   background-color: #ffd700; /* Gold */
 }
 

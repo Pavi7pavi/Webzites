@@ -1,95 +1,114 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import './AboutPage.css'; // Import your CSS styles for further customization
-import backgroundVideo from '../videos/v15.mp4'; // Import the background video
-import image1 from '../images/img23.png'; // Import additional images
-import image2 from '../images/img24.jpg';
-import image3 from '../images/img10.jpg';
-import image4 from '../images/img12.jpg';
-import image5 from '../images/img13.jpg';
-import image6 from '../images/img14.jpg';
-import image7 from '../images/img15.jpg';
-import image8 from '../images/img16.jpg';
+import { motion } from 'framer-motion';
+import ScrollReveal from 'scrollreveal';
+import { Container } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
+import './AboutPage.css';
+import backgroundVideo from '../videos/v15.mp4';
+import image1 from '../images/img4.png';
+import image2 from '../images/img19.jpg';
+import image3 from '../images/img28.png';
+import image4 from '../images/img27.png';
+import image5 from '../images/img9.jpg';
+import image6 from '../images/img30.jpg';
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const controls = useAnimation();
+  const controls = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  };
 
   useEffect(() => {
-    // Animate elements when the component mounts
-    controls.start({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-      },
-    });
     setIsVisible(true);
+
+    ScrollReveal().reveal('.scroll-reveal', {
+      delay: 300,
+      distance: '50px',
+      origin: 'bottom',
+      duration: 1000,
+      easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    });
   }, []);
 
   return (
-    <div className="about-page-container">
-      <div className="stripe-left"></div>
-      <div className="hero-section">
-        {/* Video Background */}
-        <video className="video-bg" autoPlay muted loop>
-          <source src={backgroundVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className="stripe-right"></div>
+    <div>
+<Helmet>
+  <meta charSet="utf-8" />
+  <title>About WebZites - Professional Web Development Services</title> {/* Updated title */}
+  <link rel="canonical" href="https://www.mywebzites.com/about" />
+  <meta name="description" content="Learn about WebZites' professional web development services, custom web design, and digital marketing solutions. Discover our mission, vision, and dedicated team. Contact us today!" /> {/* Updated meta description */}
+  <meta name="keywords" content="professional web development services, custom web design, digital marketing solutions, mission, vision, dedicated team, contact us" /> {/* Updated keywords */}
+  <meta name="author" content="WebZites" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {/* Meta tags for videos */}
+  <meta property="og:video" content="https://www.mywebzites.com/videos/v15.mp4" />
+  <meta property="og:video:secure_url" content="https://www.mywebzites.com/videos/v15.mp4" />
+  <meta property="og:video:type" content="video/mp4" />
+  <meta property="og:video:width" content="1920" />
+  <meta property="og:video:height" content="1080" />
+
+  {/* Meta tags for images */}
+  <meta property="og:image" content="https://www.mywebzites.com/images/img4.png" />
+  <meta property="og:image:secure_url" content="https://www.mywebzites.com/images/img4.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+
+  <meta property="og:image" content="https://www.mywebzites.com/images/img19.jpg" />
+  <meta property="og:image:secure_url" content="https://www.mywebzites.com/images/img19.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+
+  {/* Repeat the above pattern for all images */}
+</Helmet>
+
+
+
+      <motion.div
+        animate={{ y: 0 }}
+        initial={{ y: -100 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-center hero-section1-wrapper"
+      >
+        <Container fluid className="px-0 hero-section1 position-relative d-flex justify-content-center align-items-center">
+          <video className="video-bg" autoPlay muted loop>
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="p-5 hero-content"
+          >
+           <h1 className="text-white display-3 fw-bold mb-4">Discover Professional Web Development Services</h1>
+            <p className="text-white lead mb-4">Find out how WebZites provides professional web development services, custom web design, and digital marketing solutions. Learn about our mission, vision, and dedicated team. Contact us today!</p>
+           
+            <div className="scroll-down mt-4">
+              <i className="bi bi-arrow-down"></i>
+            </div>
+          </motion.div>
+        </Container>
+      </motion.div>
 
       <div className="about-content">
-        <motion.h1
-          className="title"
-          initial={{ opacity: 0, y: 50 }}
-          animate={controls}
-        >
-          Welcome to Our Service Business
-        </motion.h1>
-
         {isVisible && (
           <motion.div
             className="hero-content"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ delay: 0.2 }}
-          >
-            <motion.p
-              className="description"
-              initial={{ opacity: 0 }}
-              animate={controls}
-              transition={{ delay: 0.4 }}
-            >
-              We are dedicated to providing exceptional services to meet your
-              needs and exceed your expectations. Our team is passionate about
-              what we do and committed to delivering outstanding results.
-            </motion.p>
-            <motion.p
-              className="description"
-              initial={{ opacity: 0 }}
-              animate={controls}
-              transition={{ delay: 0.6 }}
-            >
-              At Our Service Business, we believe in building strong relationships
-              with our clients based on trust, integrity, and professionalism.
-              Whether you're looking for web design, digital marketing, e-commerce
-              solutions, or custom development, we're here to help you every step
-              of the way.
-            </motion.p>
-            <motion.p
-              className="description"
-              initial={{ opacity: 0 }}
-              animate={controls}
-              transition={{ delay: 0.8 }}
-            >
-              Contact us today to learn more about how we can assist you!
-            </motion.p>
-          </motion.div>
+          ></motion.div>
         )}
 
-        <div className="unique-section">
+        <section className="unique-section">
           <div className="unique-content">
             <h2 className="unique-title">What Makes Us Unique</h2>
             <ul className="unique-list">
@@ -127,60 +146,51 @@ const AboutPage = () => {
               </motion.li>
             </ul>
           </div>
-        </div>
+        </section>
 
-        <div className="additional-content">
+        <section className="additional-content">
           <h2>Our Mission</h2>
           <p>
-            Our mission is to empower businesses with cutting-edge solutions
-            that drive growth, foster innovation, and create lasting impact.
-            We aim to be at the forefront of technological advancements and
-            industry trends to provide our clients with the best possible
-            services and solutions.
+            At WebZites, our mission is to empower businesses with cutting-edge web development services and digital marketing solutions that drive growth, foster innovation, and create lasting impact. We aim to be at the forefront of technological advancements and industry trends to provide our clients with the best possible services and solutions, including website design and branding, mobile web design, and web application development.
           </p>
-          {/* Image container 2 with custom shape */}
           <div className="image-container image-container-2">
             <motion.img
               src={image1}
-              alt="Image 1"
+              alt="Web development project 1"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
               src={image2}
-              alt="Image 2"
+              alt="Digital marketing project"
               initial={{ opacity: 0, scale: 1.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
-            {/* Add more images with innovative animations as needed */}
           </div>
+
           <h2>Our Vision</h2>
           <p>
-            Our vision is to become a global leader in digital services, known
-            for our unwavering commitment to excellence, integrity, and
-            customer satisfaction. We aspire to transform businesses and
-            industries through our innovative approach and strategic partnerships.
+            Our vision is to become a global leader in web development and digital marketing services, known for our unwavering commitment to excellence, integrity, and customer satisfaction. We aspire to transform businesses and industries through our innovative approach and strategic partnerships, focusing on custom web development services, mobile friendly website design, and ecommerce app development company solutions.
           </p>
-          {/* Image container 1 with custom shape */}
           <div className="image-container image-container-1">
             <motion.img
-              src={image7}
-              alt="Image 3"
+              src={image3}
+              alt="Custom web design project"
               initial={{ opacity: 0, rotate: -45 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image8}
-              alt="Image 4"
+              src={image4}
+              alt="SEO services project"
               initial={{ opacity: 0, rotate: 45 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
-            {/* Add more images with innovative animations as needed */}
           </div>
+
           <h2>Core Values</h2>
           <ul className="core-values-list">
             <li>Excellence</li>
@@ -189,49 +199,28 @@ const AboutPage = () => {
             <li>Collaboration</li>
             <li>Customer-Centricity</li>
           </ul>
-          {/* Image container 3 with custom shape */}
           <div className="image-container image-container-3">
             <motion.img
-              src={image3}
-              alt="Image 5"
+              src={image5}
+              alt="Team collaboration"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
             <motion.img
-              src={image4}
-              alt="Image 6"
+              src={image6}
+              alt="Successful project"
               initial={{ opacity: 0, skewX: 30 }}
               animate={{ opacity: 1, skewX: 0 }}
               transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
             />
-            <motion.img
-              src={image5}
-              alt="Image 7"
-              initial={{ opacity: 0, skewY: -30 }}
-              animate={{ opacity: 1, skewY: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            <motion.img
-              src={image6}
-              alt="Image 8"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, type: 'spring', stiffness: 120 }}
-            />
-            {/* Add more images with innovative animations as needed */}
           </div>
+
           <h2>Our Team</h2>
           <p>
-            Behind every successful project is a dedicated team of professionals.
-            Our team consists of experts in various fields including design,
-            development, marketing, and customer service. We work together
-            seamlessly to deliver results that exceed expectations and drive
-            success for our clients.
+            Behind every successful project is a dedicated team of professionals who are passionate about their work. Meet our talented team members who bring expertise, creativity, and enthusiasm to every project we undertake. Connect with us on our <a href="/contact">Contact</a> page for more details. Whether you're a small business seeking website developers for small business solutions or a large enterprise looking for comprehensive web design SEO strategies, we're here to help.
           </p>
-
-        </div>
-        {/* Add more sections and image containers with unique shapes as needed */}
+        </section>
       </div>
     </div>
   );

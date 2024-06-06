@@ -32,13 +32,16 @@
   background-image: linear-gradient(-45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0 100%);
 }
 
-/* Hero Section Styles */
-.hero-section {
+.hero-section1 {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 100vw; /* Set width to viewport width */
+  height: 100vh; /* Set height to viewport height */
   overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
+
 
 .video-bg {
   position: absolute;
@@ -47,8 +50,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 
+/* Hero Content Styles */
+.hero-content {
+  text-align: center;
+  z-index: 1; /* Ensure content is above the video */
+}
 /* About Content Styles */
 .about-content {
   max-width: 100%; /* Change max-width to 100% */
@@ -59,8 +68,26 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Hero Content Styles */
+.hero-content {
+  text-align: center;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+/* Animation Styles */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 30px;
   color: #333333; /* Dark Grey */
@@ -68,7 +95,7 @@
 }
 
 .description {
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #666666; /* Grey */
@@ -101,10 +128,8 @@
   transition: opacity 0.3s ease;
 }
 
-
-
 .unique-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 30px;
   color: #413a3a; /* Dark Grey */
@@ -114,7 +139,7 @@
 }
 
 .unique-item {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
   color: #555555; /* Grey */
   animation: fadeInLeft 1s ease-out;
@@ -134,7 +159,7 @@
 }
 
 .additional-content h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 30px;
   color: #333333; /* Dark Grey */
@@ -142,7 +167,7 @@
 }
 
 .additional-content p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #666666; /* Grey */
@@ -156,7 +181,7 @@
 }
 
 .additional-content ul.core-values-list li {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: #666666; /* Grey */
   animation: fadeInUp 1s ease-out;
@@ -180,30 +205,6 @@
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-}
-
-
-/* Animation Styles */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 /* Innovative Animations */
@@ -318,4 +319,280 @@
 
 .image-container img:hover {
   transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* Heading Styles with Enhanced Underline Hover Effect */
+h1, h2, h3, h4, h5, h6 {
+  position: relative; /* Add relative positioning */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: inline-block; /* Make the heading inline-block for underline positioning */
+  padding-bottom: 5px; /* Add padding to create space for underline */
+  transition: color 0.3s ease-in-out; /* Add transition effect for color change */
+  font-family: 'Roboto', sans-serif; /* Apply Google Font */
+}
+
+/* Underline Styles */
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust underline position */
+  width: 100%; /* Extend underline to full width */
+  height: 2px; /* Increase underline thickness */
+  background-color: transparent; /* Set initial color to transparent */
+  transition: background-color 0.3s ease-in-out; /* Add transition effect for color change */
+}
+
+/* Animate Underline and Color on Hover */
+h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::after, h6:hover::after {
+  background-color: #ff4e50; /* Change underline color on hover */
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  color: #ff4e50; /* Change heading color on hover */
+}
+
+/* Additional Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  animation: fadeInUp 1s ease-out; /* Add fade-in animation */
+}
+
+/* Unique Section Styles */
+.unique-content {
+  position: relative;
+  z-index: 1;
+}
+
+.unique-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.unique-section:hover::after {
+  opacity: 1;
+}
+
+.unique-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.unique-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: #cccccc;
+  transition: transform 0.5s ease;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.unique-item:hover::before {
+  transform: scale(0);
+}
+
+/* Additional Content Styles */
+.additional-content {
+  position: relative;
+}
+
+.additional-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.additional-content:hover::before {
+  opacity: 1;
+}
+/* CSS for desktop screens */
+/* Add your existing CSS styles here */
+
+/* CSS for tablets */
+@media (max-width: 992px) {
+  /* Adjust font sizes, padding, margins, and other styles for tablets */
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+/* CSS for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust font sizes, padding, margins, and other styles for mobile devices */
+  .title {
+    font-size: 2rem;
+  }
+  .hero-content {
+    padding: 30px;
+  }
+  .about-content {
+    padding: 30px;
+  }
+  .additional-content {
+    padding: 30px;
+  }
+  .unique-section,
+  .additional-content {
+    margin-top: 30px;
+  }
+}
+
+/* CSS for smaller mobile devices */
+@media (max-width: 576px) {
+  /* Adjust font sizes, padding, margins, and other styles for smaller mobile devices */
+  .title {
+    font-size: 1.5rem;
+  }
+  .hero-content {
+    padding: 20px;
+  }
+  .about-content {
+    padding: 20px;
+  }
+  .additional-content {
+    padding: 20px;
+  }
+  .unique-section,
+  .additional-content {
+    margin-top: 20px;
+  }
+}
+
+/* Add more media queries as needed for finer control over responsiveness */
+/* Base styles for all devices */
+.about-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.left-decor,
+.right-decor {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #fff; /* Adjust color as needed */
+}
+
+.left-decor {
+  left: 0;
+}
+
+.right-decor {
+  right: 0;
+}
+ 
+.stripe-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-image: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+  z-index: -1;
+}
+
+.hero-section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.scroll-down {
+  margin-top: 20px;
+}
+
+/* Media queries for tablets */
+@media (max-width: 992px) {
+  .left-decor,
+  .right-decor {
+    display: none;
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
