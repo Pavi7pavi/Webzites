@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServicePage.css'; // Import your custom CSS for styling
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring'; 
 import { Helmet } from 'react-helmet';
 import webDesignIcon from '../images/web design.jpg';
