@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 import { useViewportScroll, useTransform } from 'framer-motion';
 import './HomePage.css';
