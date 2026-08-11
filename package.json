@@ -1,7 +1,7 @@
 {
   "name": "my-webzites",
-  "homepage": "https://mywebzites.com/",
   "version": "0.1.0",
+  "homepage": "https://pavi7pavi.github.io/Webzites",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
