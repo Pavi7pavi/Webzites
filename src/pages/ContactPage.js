@@ -1,40 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import './ContactPage.css'; // Importing the CSS file for styles
 import backgroundVideo from '../videos/v10.mp4'; // Importing the background video
 import contactImage from '../images/img6.jpg'; // Importing the contact image
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 const ContactUs = () => {
-  // State for form data
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  // Handle input change
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData); // Log form data for testing
-    // Clear the form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
-  };
 
   return (
     <div className="contact-page-container">
