@@ -35,8 +35,7 @@ const Footer = () => {
           <h3>Contact Details</h3>
           <ul>
             <li><FaEnvelope className="icon" /> <a href="mailto:services@mywebzites.com">services@mywebzites.com</a></li>
-            <li><FaMobileAlt className="icon" /> <a href="tel:6379941128">6379941128</a></li>
-            <li><FaMobileAlt className="icon" /> <a href="tel:6379941128">7010774264</a></li>
+            <li><FaMobileAlt className="icon" /> <a href="tel:6379941128">6xxxxxxxxx</a></li>
             <li><span className="icon">📍</span> Chennai</li>
           </ul>
         </div>
